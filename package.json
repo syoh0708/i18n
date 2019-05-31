@@ -1,0 +1,18 @@
+{
+  "name": "i18n",
+  "version": "1.0.0",
+  "description": "translation API based on key",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Seungyun Oh <syoh0708@kaist.ac.kr>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^1.6.5",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
+  }
+}

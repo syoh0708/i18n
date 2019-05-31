@@ -1,0 +1,68 @@
+### Get All keys
+
+GET http://localhost:3000/keys
+Content-Type: application/json
+
+### Get keys with name query
+
+GET http://localhost:3000/keys?name=test.key.revised2.first.one
+Content-Type: application/json
+
+### Add key
+
+POST http://localhost:3000/keys
+Content-Type: application/json
+
+{
+    "name": "test.key.sixteen.one"
+}
+
+### Edit key
+
+PUT http://localhost:3000/keys/3
+Content-Type: application/json
+
+{
+    "name": "test.key.second.one"
+}
+
+### Edit key error : key does not exist
+
+PUT http://localhost:3000/keys/100
+Content-Type: application/json
+
+{
+    "name": "test.key.second.one"
+}
+
+### Get all translations from key
+
+GET http://localhost:3000/keys/100/translations
+Content-Type: application/json
+
+### Get translation from key and locale
+
+GET http://localhost:3000/keys/100/translations/en
+Content-Type: application/json
+
+### Add translation
+
+POST http://localhost:3000/keys/1/translations/kfew
+Content-Type: application/json
+
+{
+    "value" : "첫 번째 것 입니다."
+} 
+
+### Edit translation
+
+PUT http://localhost:3000/keys/1/translations/en
+Content-Type: application/json
+
+{
+    "value" : "It's revised first one."
+} 
+
+### Detect language
+POST http://localhost:3000/language_detect?message=안녕
+Content-Type: application/json
